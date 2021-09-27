@@ -20,7 +20,7 @@ export default {
   },
   data: function () {
     let countdownStarted = false
-    if(localStorage.getItem("already_started") === "true") {
+    if(localStorage.getItem("countDate") !== null) {
       countdownStarted = true
     }
     return {
@@ -63,7 +63,6 @@ export default {
           self.hLeft = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
           self.mLeft = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
           self.sLeft = Math.floor((distance % (1000 * 60)) / 1000);
-          localStorage.setItem("already_started", "true")
           if(distance < 0) {
             clearInterval(countdown)
           }
