@@ -4,10 +4,10 @@
       <h1 class="text-center p-3">When is your party?</h1>
       <input class="form-control" type="time" v-model="current_time">
       <input class="form-control mt-4" type="date" v-model="current_date">
-      <button @click="createDate()" class="btn btn-primary d-block m-auto mt-4">Start countdown</button>
+      <button @click="createDate()" class="btn button d-block m-auto mt-4">start countdown</button>
     </div>
     <Countdown v-if="countdownStarted" :d="dLeft" :h="hLeft" :m="mLeft" :s="sLeft"></Countdown>
-    <button v-if="countdownStarted" @click="stopCountdown()" class="btn btn-primary d-block m-auto mt-4">Stop countdown</button>
+    <button v-if="countdownStarted" @click="stopCountdown()" class="btn button d-block m-auto mt-4">stop countdown</button>
   </div>
 </template>
 

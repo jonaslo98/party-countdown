@@ -1,22 +1,28 @@
 <template>
   <div id="footer">
-    <h2 class="text-center pt-3 pb-5">How do i start a countdown?</h2>
-    <div class="d-flex p-5 justify-content-between container m-auto footer-captions text-center">
-      <div class="footer-caption p-2">
-        <h3 class="pt-1"><font-awesome-icon icon="calendar-alt" /> Pick a date</h3>
+    <h2 class="text-center pt-1 pb-5">How do i start a countdown?</h2>
+    <div class="d-flex p-3 justify-content-between container m-auto footer-captions text-center">
+      <div class="footer-caption p-1">
+        <font-awesome-icon class="font-icon" icon="calendar-alt" />
+        <h3 class="pt-4">Pick a date</h3>
         <p>Pick the date you are waiting the most for</p>
       </div>
       <div class="footer-caption p-2">
-        <h3 class="pt-1"><font-awesome-icon icon="clock" /> Pick the time</h3>
+        <font-awesome-icon class="font-icon" icon="clock" />
+        <h3 class="pt-4">Pick the time</h3>
         <p>Pick the time your event is supposed to start</p>
       </div>
       <div class="footer-caption p-2">
-        <h3 class="pt-1"><font-awesome-icon icon="cocktail" /> Press the button..</h3>
+        <font-awesome-icon class="font-icon" icon="cocktail" />
+        <h3 class="pt-4">Press the button..</h3>
         <p class="">and wait for your special date to come!</p>
       </div>
     </div>
     <div class="d-flex justify-content-center">
       <hr />
+    </div>
+    <div class="text-center">
+      <p>Made by<br /><a href="https://jonaslorentsen.com/">jonaslorentsen.com</a> </p>
     </div>
   </div>
 </template>
