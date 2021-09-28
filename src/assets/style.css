@@ -1,0 +1,53 @@
+body {
+    background-color: #D4E6F1 !important;
+}
+#front-wrapper {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #fff;
+    padding-top: 60px;
+    background-color: #21618C;
+    position: relative;
+    padding-bottom: 300px;
+}
+.custom-shape-divider-bottom-1632839584 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+#footer {
+    background-color: #D4E6F1;
+    color: #5499C7;
+}
+#form {
+    background-color: #1B4F72;
+    border-radius: 12px;
+    width: 95%;
+    max-width: 900px;
+    box-shadow: 0 20px 25px -5px rgb(6 20 41 / 10%), 0 10px 10px -5px rgb(6 20 41 / 4%);
+}
+#form h1, #form h2 {
+    color: #A9CCE3;
+    font-weight: bold;
+}
+#header h1 {
+    font-size: 4em;
+    letter-spacing: 3px;
+}
+#form h1 {
+    color: #A9CCE3;
+}
+#form h2 {
+    font-size: 2.4em;
+}
+#footer h2 {
+    font-size: 2.6em;
+}
+
+hr {
+    width: 70%;
+}

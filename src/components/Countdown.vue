@@ -30,7 +30,4 @@ export default {
 </script>
 
 <style scoped>
-p, h1 {
-  color: #020202;
-}
 </style>
