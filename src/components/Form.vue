@@ -2,22 +2,30 @@
   <div id="form" class="p-4 m-auto mt-4">
     <div v-if="!countdownStarted">
       <h1 class="text-center p-3">When is your party?</h1>
+      <input class="form-control mt-2 mb-4" type="date" v-model="current_date">
       <input class="form-control" type="time" v-model="current_time">
-      <input class="form-control mt-4" type="date" v-model="current_date">
       <button @click="createDate()" class="btn button d-block m-auto mt-4">start countdown</button>
     </div>
-    <Countdown v-if="countdownStarted" :d="dLeft" :h="hLeft" :m="mLeft" :s="sLeft"></Countdown>
-    <button v-if="countdownStarted" @click="stopCountdown()" class="btn button d-block m-auto mt-4">stop countdown</button>
+    <div v-if="countdownStarted && !countdownEnd">
+      <Countdown :d="dLeft" :h="hLeft" :m="mLeft" :s="sLeft"></Countdown>
+      <button @click="stopCountdown()" class="btn button d-block m-auto mt-4">stop countdown</button>
+    </div>
+    <div v-if="countdownEnd">
+      <end-countdown></end-countdown>
+      <button @click="stopCountdown()" class="btn button d-block m-auto mt-4">new countdown</button>
+    </div>
   </div>
 </template>
 
 <script>
 import Countdown from "@/components/Countdown";
+import endCountdown from "@/components/endCountdown";
 
 export default {
   name: "Form",
   components: {
-    Countdown
+    Countdown,
+    endCountdown
   },
   data: function () {
     let countdownStarted = false
@@ -32,7 +40,8 @@ export default {
       dLeft: 0,
       hLeft: 0,
       mLeft: 0,
-      sLeft: 0
+      sLeft: 0,
+      countdownEnd: false
     }
   },
   created() {
@@ -67,15 +76,17 @@ export default {
           self.sLeft = Math.floor((distance % (1000 * 60)) / 1000);
           if(distance < 0) {
             clearInterval(self.countdown)
+            self.countdownEnd = true
           }
       }, 1000)
       this.countdownStarted = true
     },
     stopCountdown() {
+      this.countdownEnd = false
       this.countdownStarted = false
       localStorage.removeItem("countDate")
       clearInterval(this.countdown)
-    }
+    },
   }
 }
 </script>
