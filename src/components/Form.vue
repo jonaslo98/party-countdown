@@ -41,7 +41,7 @@ export default {
       hLeft: 0,
       mLeft: 0,
       sLeft: 0,
-      countdownEnd: false
+      countdownEnd: false,
     }
   },
   created() {
